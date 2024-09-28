@@ -30,6 +30,9 @@
 *:before {
   box-sizing: border-box
 }
+html {
+  scroll-behavior: smooth
+}
 body,
 html {
   height: 100%;
@@ -76,6 +79,9 @@ h5,
 h6 {
   font-weight: inherit;
   font-size: inherit
+}
+body {
+  position: relative
 }
 .lock body {
   overflow: hidden;
@@ -173,6 +179,21 @@ h6 {
 }
 .title--white {
   color: #fff
+}
+.scroll-up {
+  position: fixed;
+  right: 1.875rem;
+  bottom: -50%;
+  rotate: -90deg;
+  padding: 1.25rem .625rem 1.125rem .625rem;
+  background-color: #161616;
+  border-radius: .625rem;
+  transition: all .3s;
+  z-index: 999;
+  cursor: pointer
+}
+.scroll-up.show-scroll {
+  bottom: 0
 }
 .header {
   position: fixed;
@@ -1006,7 +1027,9 @@ h6 {
 }
 .card-item {
   padding-left: 1.5625rem;
-  padding-right: 1.5625rem
+  padding-right: 1.5625rem;
+  display: flex;
+  flex-direction: column
 }
 .card-item > * {
   margin-bottom: 2.1875rem
@@ -1039,10 +1062,12 @@ h6 {
   transition: fill .5s
 }
 .swiper-button-prev {
-  left: 0
+  left: 0;
+  padding: .4375rem 0 .4375rem .625rem
 }
 .swiper-button-next {
-  right: 0
+  right: 0;
+  padding: .4375rem .625rem .4375rem 0
 }
 .swiper-button-disabled {
   display: none
@@ -1365,10 +1390,10 @@ h6 {
     height: 31.25rem
   }
   .menu-katalog__container {
-    padding-top: 19.25rem
+    padding-top: 12.5rem
   }
   .menu-katalog__container {
-    padding-bottom: 17.3125rem
+    padding-bottom: 12.5rem
   }
   .kategori-link {
     -webkit-column-gap: 4.5625rem;
@@ -1747,24 +1772,24 @@ h6 {
       height: calc(20.625rem + 10.625 * (100vw - 20rem)/ 66.875)
     }
   }
-  @supports (padding-top:clamp(6.25rem ,2.3621495327rem + 19.4392523364vw ,19.25rem)) {
+  @supports (padding-top:clamp(6.25rem ,4.3808411215rem + 9.3457943925vw ,12.5rem)) {
     .menu-katalog__container {
-      padding-top: clamp(6.25rem ,2.3621495327rem + 19.4392523364vw ,19.25rem)
+      padding-top: clamp(6.25rem ,4.3808411215rem + 9.3457943925vw ,12.5rem)
     }
   }
-  @supports not (padding-top:clamp(6.25rem ,2.3621495327rem + 19.4392523364vw ,19.25rem)) {
+  @supports not (padding-top:clamp(6.25rem ,4.3808411215rem + 9.3457943925vw ,12.5rem)) {
     .menu-katalog__container {
-      padding-top: calc(6.25rem + 13 * (100vw - 20rem)/ 66.875)
+      padding-top: calc(6.25rem + 6.25 * (100vw - 20rem)/ 66.875)
     }
   }
-  @supports (padding-bottom:clamp(4rem ,0.0186915888rem + 19.9065420561vw ,17.3125rem)) {
+  @supports (padding-bottom:clamp(4rem ,1.4579439252rem + 12.7102803738vw ,12.5rem)) {
     .menu-katalog__container {
-      padding-bottom: clamp(4rem ,.0186915888rem + 19.9065420561vw ,17.3125rem)
+      padding-bottom: clamp(4rem ,1.4579439252rem + 12.7102803738vw ,12.5rem)
     }
   }
-  @supports not (padding-bottom:clamp(4rem ,0.0186915888rem + 19.9065420561vw ,17.3125rem)) {
+  @supports not (padding-bottom:clamp(4rem ,1.4579439252rem + 12.7102803738vw ,12.5rem)) {
     .menu-katalog__container {
-      padding-bottom: calc(4rem + 13.3125 * (100vw - 20rem)/ 66.875)
+      padding-bottom: calc(4rem + 8.5 * (100vw - 20rem)/ 66.875)
     }
   }
   @supports ((-moz-column-gap:clamp(0.3125rem ,-0.9585280374rem + 6.3551401869vw ,4.5625rem)) or (column-gap:clamp(0.3125rem ,-0.9585280374rem + 6.3551401869vw ,4.5625rem))) {
@@ -1891,6 +1916,10 @@ h6 {
 @media (any-hover:hover) {
   .button:hover {
     background-color: #e15b19
+  }
+  .scroll-up:hover {
+    -webkit-transform: translateX(.3125rem);
+    transform: translateX(.3125rem)
   }
   .footer__contact-email:hover {
     text-decoration: underline
