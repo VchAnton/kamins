@@ -1076,7 +1076,8 @@ body {
   margin-bottom: 0
 }
 .card-item__wrap {
-  padding-left: .9375rem
+  padding-left: .9375rem;
+  min-width: 13.75rem
 }
 .card-item__image {
   position: relative;
@@ -1092,10 +1093,14 @@ body {
   object-fit: contain
 }
 .card-item__title {
+  min-height: 3.1875rem;
   margin-bottom: .9375rem
 }
 .card-item__price {
   margin-bottom: 15px
+}
+.card-item__price.content__price {
+  align-items: start
 }
 .card-item__price-lable {
   font-size: .625rem;
@@ -1153,6 +1158,9 @@ body {
 }
 .swiper-button-disabled {
   display: none
+}
+.swiper-button-lock {
+  display: block!important
 }
 .insulation__inner {
   display: flex;
