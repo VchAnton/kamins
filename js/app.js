@@ -3459,33 +3459,6 @@
             },
             on: {}
         });
-        if (document.querySelector(".swiper")) new swiper_core_Swiper(".insulation__slider", {
-            observer: true,
-            observeParents: true,
-            slidesPerView: 1,
-            spaceBetween: 10,
-            speed: 800,
-            effect: "fade",
-            fadeEffect: {
-                crossFade: true
-            },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                    autoHeight: true
-                },
-                475: {
-                    slidesPerView: 1,
-                    spaceBetween: 20,
-                    autoHeight: true
-                },
-                768: {
-                    spaceBetween: 20
-                }
-            },
-            on: {}
-        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
