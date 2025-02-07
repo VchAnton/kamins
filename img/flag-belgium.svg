@@ -1,0 +1,16 @@
+<svg width="45.450012" height="45.450195" viewBox="0 0 45.45 45.4502" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip1532_82">
+			<rect id="emojione-v1:flag-for-belgium" rx="0.000000" width="44.450001" height="44.450001" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="emojione-v1:flag-for-belgium" rx="0.000000" width="44.450001" height="44.450001" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip1532_82)">
+		<path id="Vector" d="M15.62 7.1L29.82 7.1L29.82 38.34L15.62 38.34L15.62 7.1Z" fill="#F9CB38" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M7.1 7.1C2.39 7.1 0 10.59 0 14.91L0 30.53C0 34.85 2.39 38.34 7.1 38.34L15.62 38.34L15.62 7.1L7.1 7.1Z" fill="#25333A" fill-opacity="1.000000" fill-rule="nonzero"/>
+		<path id="Vector" d="M38.34 7.1L29.82 7.1L29.82 38.34L38.34 38.34C43.05 38.34 45.45 34.85 45.45 30.53L45.45 14.91C45.45 10.59 43.05 7.1 38.34 7.1Z" fill="#EC1C24" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>
