@@ -1093,6 +1093,8 @@ body {
   object-fit: contain
 }
 .card-item__title {
+  text-wrap: balance;
+  max-width: 12.5rem;
   min-height: 3.1875rem;
   margin-bottom: .9375rem
 }
