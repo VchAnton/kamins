@@ -238,6 +238,20 @@ body {
 .title--white {
   color: #fff
 }
+.evro {
+  position: relative
+}
+.evro::before {
+  content: "";
+  position: absolute;
+  width: .6875rem;
+  height: .9375rem;
+  right: 0;
+  top: -.3125rem;
+  background: url(../img/fa_euro.svg);
+  background-repeat: no-repeat;
+  background-position: right
+}
 .scroll-up {
   position: fixed;
   right: 1.875rem;
@@ -735,19 +749,11 @@ body {
   font-weight: 900;
   line-height: 105.5%;
   text-transform: uppercase;
-  position: relative;
   padding-right: .5625rem
 }
-.content__price-new::before {
-  content: "";
-  position: absolute;
-  width: .6875rem;
-  height: .9375rem;
-  right: 0;
-  top: -.3125rem;
-  background: url(../img/fa_euro.svg);
-  background-repeat: no-repeat;
-  background-position: right
+.content__price-new.onSaleSoon {
+  font-size: 1.375rem;
+  color: #e15b19
 }
 .content__price-old {
   align-self: flex-end;
@@ -938,6 +944,9 @@ body {
   color: #fff;
   font-weight: 700
 }
+.footer__contact-name span {
+  font-weight: 400
+}
 .footer__contact-email {
   font-weight: 400;
   transition: all .3s ease .3s
@@ -1121,6 +1130,10 @@ body {
 }
 .card-item__characteristics span {
   font-weight: 400
+}
+h3.card-item__title span {
+  font-size: .75rem;
+  font-weight: 500
 }
 .tabs-price {
   display: flex;
