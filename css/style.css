@@ -917,7 +917,6 @@ body {
   letter-spacing: .0063rem
 }
 .footer__contacts {
-  margin-top: 3.75rem;
   display: flex;
   flex-wrap: wrap;
   row-gap: .9375rem;
@@ -1547,6 +1546,9 @@ h3.card-item__title span {
   .box-location__responsive {
     height: 31.25rem
   }
+  .footer__contacts {
+    margin-top: 3.75rem
+  }
   .menu-katalog__container {
     padding-top: 12.5rem
   }
@@ -1679,6 +1681,9 @@ h3.card-item__title span {
   }
   .box-location__responsive {
     height: 20.625rem
+  }
+  .footer__contacts {
+    margin-top: 2.5rem
   }
   .menu-katalog__container {
     padding-top: 6.25rem
@@ -1972,6 +1977,16 @@ h3.card-item__title span {
   @supports not (height:clamp(20.625rem ,17.4474299065rem + 15.8878504673vw ,31.25rem)) {
     .box-location__responsive {
       height: calc(20.625rem + 10.625 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (margin-top:clamp(2.5rem ,2.1261682243rem + 1.8691588785vw ,3.75rem)) {
+    .footer__contacts {
+      margin-top: clamp(2.5rem ,2.1261682243rem + 1.8691588785vw ,3.75rem)
+    }
+  }
+  @supports not (margin-top:clamp(2.5rem ,2.1261682243rem + 1.8691588785vw ,3.75rem)) {
+    .footer__contacts {
+      margin-top: calc(2.5rem + 1.25 * (100vw - 20rem)/ 66.875)
     }
   }
   @supports (padding-top:clamp(6.25rem ,4.3808411215rem + 9.3457943925vw ,12.5rem)) {
