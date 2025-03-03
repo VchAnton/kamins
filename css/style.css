@@ -1,25 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url(../fonts/Roboto-black.woff2) format("woff2"),url(../fonts/Roboto-black.woff) format("woff");
-  font-weight: 900;
-  font-style: normal
-}
-@font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url(../fonts/Roboto-bold.woff2) format("woff2"),url(../fonts/Roboto-bold.woff) format("woff");
-  font-weight: 700;
-  font-style: normal
-}
-@font-face {
-  font-family: Roboto;
-  font-display: swap;
-  src: url(../fonts/Roboto.woff2) format("woff2"),url(../fonts/Roboto.woff) format("woff");
-  font-weight: 400;
-  font-style: normal
-}
 * {
   padding: 0;
   margin: 0;
@@ -1671,7 +1650,7 @@ h3.card-item__title span {
     height: 1.1875rem
   }
   .content__characteristics li {
-    font-size: .9375rem
+    font-size: 1rem
   }
   .content__button {
     width: 9.875rem
@@ -1818,6 +1797,15 @@ h3.card-item__title span {
     display: none
   }
 }
+@media (max-width:29.6875em) {
+  .card-item__wrap {
+    padding-left: 3.75rem
+  }
+  .card-item__image img {
+    width: 80%;
+    left: 2.25rem
+  }
+}
 @media (min-width:20em) and (max-width:86.875em) {
   @supports (font-size:clamp(1.875rem ,1.5011682243rem + 1.8691588785vw ,3.125rem)) {
     .title {
@@ -1939,14 +1927,14 @@ h3.card-item__title span {
       height: calc(1.1875rem + .375 * (100vw - 20rem)/ 66.875)
     }
   }
-  @supports (font-size:clamp(0.9375rem ,0.8440420561rem + 0.4672897196vw ,1.25rem)) {
+  @supports (font-size:clamp(1rem ,0.9252336449rem + 0.3738317757vw ,1.25rem)) {
     .content__characteristics li {
-      font-size: clamp(.9375rem ,.8440420561rem + .4672897196vw ,1.25rem)
+      font-size: clamp(1rem ,.9252336449rem + .3738317757vw ,1.25rem)
     }
   }
-  @supports not (font-size:clamp(0.9375rem ,0.8440420561rem + 0.4672897196vw ,1.25rem)) {
+  @supports not (font-size:clamp(1rem ,0.9252336449rem + 0.3738317757vw ,1.25rem)) {
     .content__characteristics li {
-      font-size: calc(.9375rem + .3125 * (100vw - 20rem)/ 66.875)
+      font-size: calc(1rem + .25 * (100vw - 20rem)/ 66.875)
     }
   }
   @supports (width:clamp(9.875rem ,8.1553738318rem + 8.5981308411vw ,15.625rem)) {
