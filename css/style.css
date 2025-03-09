@@ -303,7 +303,7 @@ body {
   border-radius: 0 0 .75rem .75rem
 }
 ._header-scroll .header__container {
-  min-height: 3.75rem;
+  min-height: 4.0625rem;
   transition: min-height .3s ease 0s
 }
 .header._header-show {
@@ -1798,12 +1798,9 @@ h3.card-item__title span {
   }
 }
 @media (max-width:29.6875em) {
-  .card-item__wrap {
-    padding-left: 3.75rem
-  }
   .card-item__image img {
-    width: 80%;
-    left: 2.25rem
+    width: 90%;
+    left: 1.125rem
   }
 }
 @media (min-width:20em) and (max-width:86.875em) {
