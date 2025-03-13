@@ -516,7 +516,7 @@ body {
 .advantages {
   padding-block: 3.125rem;
   padding-inline: 0;
-  background: #000100 100%;
+  background: #000100;
   position: relative;
   z-index: 10
 }
@@ -1249,6 +1249,54 @@ h3.card-item__title span {
 .insulation .content__title {
   width: 100%
 }
+.inDevelopment {
+  padding-block: 3.125rem;
+  background-color: #000100;
+  position: relative;
+  z-index: 1
+}
+.inDevelopment::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/Vector1.svg);
+  z-index: -1
+}
+.inDevelopment__title {
+  text-align: center
+}
+.inDevelopment__description {
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: .0625rem
+}
+.loading {
+  max-inline-size: 58.125rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center
+}
+.loading__line {
+  max-inline-size: 46.25rem;
+  width: 100%;
+  background-color: #e15b19;
+  margin-inline: auto;
+  position: relative
+}
+.loading__line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(../img/line.svg);
+  background-repeat: repeat-x
+}
 .swiper {
   overflow: hidden
 }
@@ -1630,6 +1678,21 @@ h3.card-item__title span {
   .insulation .content__characteristics p {
     font-size: 1.25rem
   }
+  .inDevelopment__title {
+    margin-bottom: 2.1875rem
+  }
+  .inDevelopment__description {
+    font-size: 1.5625rem
+  }
+  .inDevelopment__description {
+    margin-bottom: 6.25rem
+  }
+  .loading__line {
+    height: 1.875rem
+  }
+  .loading__line::after {
+    height: 1.875rem
+  }
 }
 @media (min-width:20em) {
   .video__imege::after {
@@ -1769,6 +1832,24 @@ h3.card-item__title span {
   }
   .insulation .content__characteristics p {
     font-size: .9375rem
+  }
+  .inDevelopment__title {
+    margin-bottom: 1.25rem
+  }
+  .inDevelopment__description {
+    font-size: .875rem
+  }
+  .inDevelopment__description {
+    margin-bottom: 2.5rem
+  }
+  .loading__img {
+    height: 3.75rem
+  }
+  .loading__line {
+    height: .5rem
+  }
+  .loading__line::after {
+    height: .4375rem
   }
 }
 @media (max-width:61.99875em) {
@@ -2195,6 +2276,66 @@ h3.card-item__title span {
   @supports not (font-size:clamp(0.9375rem ,0.8440420561rem + 0.4672897196vw ,1.25rem)) {
     .insulation .content__characteristics p {
       font-size: calc(.9375rem + .3125 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (margin-bottom:clamp(1.25rem ,0.9696261682rem + 1.4018691589vw ,2.1875rem)) {
+    .inDevelopment__title {
+      margin-bottom: clamp(1.25rem ,.9696261682rem + 1.4018691589vw ,2.1875rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(1.25rem ,0.9696261682rem + 1.4018691589vw ,2.1875rem)) {
+    .inDevelopment__title {
+      margin-bottom: calc(1.25rem + .9375 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (font-size:clamp(0.875rem ,0.6693925234rem + 1.0280373832vw ,1.5625rem)) {
+    .inDevelopment__description {
+      font-size: clamp(.875rem ,.6693925234rem + 1.0280373832vw ,1.5625rem)
+    }
+  }
+  @supports not (font-size:clamp(0.875rem ,0.6693925234rem + 1.0280373832vw ,1.5625rem)) {
+    .inDevelopment__description {
+      font-size: calc(.875rem + .6875 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (margin-bottom:clamp(2.5rem ,1.3785046729rem + 5.6074766355vw ,6.25rem)) {
+    .inDevelopment__description {
+      margin-bottom: clamp(2.5rem ,1.3785046729rem + 5.6074766355vw ,6.25rem)
+    }
+  }
+  @supports not (margin-bottom:clamp(2.5rem ,1.3785046729rem + 5.6074766355vw ,6.25rem)) {
+    .inDevelopment__description {
+      margin-bottom: calc(2.5rem + 3.75 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (height:clamp(3.75rem ,2.7219626168rem + 5.1401869159vw ,7.1875rem)) {
+    .loading__img {
+      height: clamp(3.75rem ,2.7219626168rem + 5.1401869159vw ,7.1875rem)
+    }
+  }
+  @supports not (height:clamp(3.75rem ,2.7219626168rem + 5.1401869159vw ,7.1875rem)) {
+    .loading__img {
+      height: calc(3.75rem + 3.4375 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (height:clamp(0.5rem ,0.0887850467rem + 2.0560747664vw ,1.875rem)) {
+    .loading__line {
+      height: clamp(.5rem ,.0887850467rem + 2.0560747664vw ,1.875rem)
+    }
+  }
+  @supports not (height:clamp(0.5rem ,0.0887850467rem + 2.0560747664vw ,1.875rem)) {
+    .loading__line {
+      height: calc(.5rem + 1.375 * (100vw - 20rem)/ 66.875)
+    }
+  }
+  @supports (height:clamp(0.4375rem ,0.0075934579rem + 2.1495327103vw ,1.875rem)) {
+    .loading__line::after {
+      height: clamp(.4375rem ,.0075934579rem + 2.1495327103vw ,1.875rem)
+    }
+  }
+  @supports not (height:clamp(0.4375rem ,0.0075934579rem + 2.1495327103vw ,1.875rem)) {
+    .loading__line::after {
+      height: calc(.4375rem + 1.4375 * (100vw - 20rem)/ 66.875)
     }
   }
 }
