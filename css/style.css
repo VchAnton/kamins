@@ -292,7 +292,7 @@ body {
   right: .75rem;
   width: 1rem;
   height: 1rem;
-  background-image: url(../img/phone.svg);
+  background-image: url(../img/phone2.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
@@ -434,7 +434,7 @@ body {
   right: 22px;
   width: 17px;
   height: 17px;
-  background-image: url(../img/phone.svg);
+  background-image: url(../img/phone2.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover
@@ -501,21 +501,22 @@ body {
   position: absolute;
   background-image: url(../img/arrow.svg);
   background-repeat: no-repeat;
-  top: 98.1697171381%;
+  top: 119.8003327787%;
   left: 39.0625%;
   width: 100%;
   height: 3.8125rem
 }
 .about__img-wrpper {
-  padding-top: 2.8125rem;
+  padding-top: 3.125rem;
   text-align: center
 }
 .about__img {
   max-width: 100%
 }
 .advantages {
-  padding: 3.125rem 0 3.125rem 0;
-  background: linear-gradient(173deg,#1d0201 0,#000100 100%);
+  padding-block: 3.125rem;
+  padding-inline: 0;
+  background: #000100 100%;
   position: relative;
   z-index: 10
 }
@@ -562,29 +563,38 @@ body {
 }
 .video__imege {
   position: relative;
+  overflow: hidden;
   max-width: 47.9375rem
 }
-.video__imege-ibg img {
+.video__imege::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
   -o-object-fit: cover;
-  object-fit: cover
+  object-fit: cover;
+  background-color: rgba(22,22,22,.3);
+  z-index: 1
+}
+.video__imege-ibg img {
+  -o-object-position: top;
+  object-position: top
 }
 .video__button::before {
   content: "";
   position: absolute;
-  width: 4.6875rem;
-  height: 4.375rem;
+  width: 3.625rem;
+  height: 3.625rem;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   background-image: url(../img/solar_play-bold.svg);
   background-position: center;
-  background-repeat: no-repeat
+  background-repeat: no-repeat;
+  z-index: 2
 }
 .video__text {
   display: none;
@@ -595,7 +605,8 @@ body {
   align-self: center;
   text-wrap: pretty;
   letter-spacing: .0656rem;
-  position: relative
+  position: relative;
+  text-transform: uppercase
 }
 .video__text::before {
   content: "";
@@ -634,7 +645,7 @@ body {
 .partners__image {
   min-height: 7.3125rem;
   display: flex;
-  align-items: center
+  align-items: flex-end
 }
 .partners__image img {
   min-width: 100%
@@ -920,7 +931,9 @@ body {
 }
 .footer__contact-name {
   color: #fff;
-  font-weight: 700
+  font-weight: 700;
+  -webkit-padding-start: .625rem;
+  padding-inline-start: .625rem
 }
 .footer__contact-name span {
   font-weight: 400
@@ -937,18 +950,34 @@ body {
   transition: text-decoration .3s ease 0s,-webkit-text-decoration .3s ease 0s
 }
 .footer__contact-tel:not(:last-child) {
-  margin-bottom: .5625rem
+  margin-bottom: .625rem
 }
 .footer__sociaL-items {
   display: flex;
   -webkit-column-gap: 1.25rem;
   -moz-column-gap: 1.25rem;
-  column-gap: 1.25rem
+  column-gap: 1.25rem;
+  -webkit-padding-start: .625rem;
+  padding-inline-start: .625rem
 }
 .footer__sociaL-item {
   transition: -webkit-transform .3s ease 0s;
   transition: transform .3s ease 0s;
   transition: transform .3s ease 0s,-webkit-transform .3s ease 0s
+}
+.work-schedule {
+  display: flex;
+  color: #fff;
+  text-transform: uppercase;
+  gap: .8125rem;
+  -webkit-padding-start: .625rem;
+  padding-inline-start: .625rem
+}
+.work-schedule__day p:not(:last-child) {
+  margin-bottom: .625rem
+}
+.work-schedule__time p:not(:last-child) {
+  margin-bottom: .625rem
 }
 .menu-katalog__container {
   position: relative;
@@ -981,19 +1010,34 @@ body {
   flex: 1 1 auto
 }
 .kategoris__grates {
+  opacity: .5;
+  pointer-events: none;
+  cursor: cell;
   flex: 1 1 auto
 }
 .kategoris__chimneys {
-  flex: 1 1 auto
+  flex: 1 1 auto;
+  opacity: .5;
+  pointer-events: none;
+  cursor: cell
 }
 .kategoris__insulation {
-  flex: 1 1 auto
+  flex: 1 1 auto;
+  opacity: .5;
+  pointer-events: none;
+  cursor: cell
 }
 .kategoris__hot-air {
-  flex: 1 1 auto
+  flex: 1 1 auto;
+  opacity: .5;
+  pointer-events: none;
+  cursor: cell
 }
 .kategoris__cold-air {
-  flex: 1 1 auto
+  flex: 1 1 auto;
+  opacity: .5;
+  pointer-events: none;
+  cursor: cell
 }
 .kategoris__more {
   flex: 1 1 auto;
@@ -1004,10 +1048,8 @@ body {
   text-transform: uppercase;
   align-self: center;
   border-radius: .9375rem;
-  padding-right: 5.125rem;
-  padding-left: 5.125rem;
-  padding-top: 1.0625rem;
-  padding-bottom: 1.0625rem;
+  padding-inline: 5.125rem;
+  padding-block: 1.0625rem;
   text-wrap: wrap
 }
 .kategoris__more a {
@@ -1044,10 +1086,12 @@ body {
   align-items: end
 }
 .manufacturer__logo {
-  flex: 0 1 auto
+  flex: 0 1 auto;
+  max-height: 2.5rem;
+  max-width: 7.5rem
 }
 .manufacturer__country {
-  flex: 0 0 2.8125rem
+  flex: 1 0 2.8125rem
 }
 .card-item {
   height: 100%;
@@ -1285,6 +1329,12 @@ h3.card-item__title span {
     display: grid;
     grid-template-columns: repeat(2,1fr)
   }
+  .video__imege {
+    border-radius: .625rem
+  }
+  .video__imege::after {
+    background-color: rgba(22,22,22,.2)
+  }
   .video__text {
     display: flex
   }
@@ -1364,7 +1414,7 @@ h3.card-item__title span {
     height: 24px
   }
   .advantages {
-    padding: 5rem 0 5rem 0
+    padding-block: 5rem
   }
   .video__text::before {
     top: 7.5rem
@@ -1385,6 +1435,8 @@ h3.card-item__title span {
     border: 5px solid #161616
   }
   .fireplace__body {
+    -webkit-padding-start: 3.75rem;
+    padding-inline-start: 3.75rem;
     grid-template-columns: 1fr 2fr
   }
 }
@@ -1579,6 +1631,11 @@ h3.card-item__title span {
     font-size: 1.25rem
   }
 }
+@media (min-width:20em) {
+  .video__imege::after {
+    background-color: rgba(22,22,22,.4)
+  }
+}
 @media (min-width:50em) {
   .about__text {
     max-width: 37.5rem
@@ -1592,7 +1649,6 @@ h3.card-item__title span {
   }
   .video__text {
     order: 1;
-    text-align: right;
     justify-self: end
   }
   .location__wrapper {
@@ -1792,6 +1848,9 @@ h3.card-item__title span {
 @media (max-width:29.99875em) {
   .scroll-up {
     padding: 1.25rem .625rem 1.125rem .625rem
+  }
+  .video__imege .video__image-ibg {
+    padding-bottom: 125%
   }
   .insulation__manufacturer .manufacturer__country {
     display: none
